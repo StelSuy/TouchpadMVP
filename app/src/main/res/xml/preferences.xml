@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="Жесты одним пальцем">
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="tap_click"
+            android:summary="Короткое касание = левый клик"
+            android:title="Тап = клик" />
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="tap_drag"
+            android:summary="Тап, затем сразу коснуться и вести: перетаскивание и выделение текста"
+            android:title="Тап + движение = перетаскивание" />
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="long_press_drag"
+            android:summary="Удержи палец на месте: левая кнопка зажмётся, ведёшь — выделяешь"
+            android:title="Долгое нажатие = зажать кнопку" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Жесты двумя пальцами">
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="two_finger_tap"
+            android:title="Тап двумя пальцами = правый клик" />
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="two_finger_scroll"
+            android:title="Прокрутка двумя пальцами" />
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:dependency="two_finger_scroll"
+            android:key="natural_scroll"
+            android:summary="Страница едет за пальцами, как на телефоне"
+            android:title="Натуральная прокрутка" />
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:dependency="two_finger_scroll"
+            android:key="horizontal_scroll"
+            android:title="Горизонтальная прокрутка" />
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="pinch_zoom"
+            android:summary="Свести / развести пальцы = Ctrl + колесо"
+            android:title="Масштаб щипком" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Жесты тремя пальцами">
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="three_finger_tap"
+            android:title="Тап тремя пальцами = средний клик" />
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="three_finger_swipe"
+            android:title="Свайпы тремя пальцами" />
+        <ListPreference
+            android:defaultValue="task_view"
+            android:dependency="three_finger_swipe"
+            android:entries="@array/swipe_entries"
+            android:entryValues="@array/swipe_values"
+            android:key="swipe_up"
+            android:title="Свайп вверх"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            android:defaultValue="desktop"
+            android:dependency="three_finger_swipe"
+            android:entries="@array/swipe_entries"
+            android:entryValues="@array/swipe_values"
+            android:key="swipe_down"
+            android:title="Свайп вниз"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            android:defaultValue="desk_prev"
+            android:dependency="three_finger_swipe"
+            android:entries="@array/swipe_entries"
+            android:entryValues="@array/swipe_values"
+            android:key="swipe_left"
+            android:title="Свайп влево"
+            app:useSimpleSummaryProvider="true" />
+        <ListPreference
+            android:defaultValue="desk_next"
+            android:dependency="three_finger_swipe"
+            android:entries="@array/swipe_entries"
+            android:entryValues="@array/swipe_values"
+            android:key="swipe_right"
+            android:title="Свайп вправо"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Курсор и прокрутка">
+        <SeekBarPreference
+            android:defaultValue="18"
+            android:key="sensitivity"
+            android:max="40"
+            android:summary="Насколько быстро едет курсор"
+            android:title="Чувствительность"
+            app:min="5"
+            app:showSeekBarValue="true" />
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="accel"
+            android:summary="Быстрое движение пальца двигает курсор дальше"
+            android:title="Ускорение курсора" />
+        <SeekBarPreference
+            android:defaultValue="4"
+            android:dependency="accel"
+            android:key="accel_level"
+            android:max="10"
+            android:title="Сила ускорения"
+            app:min="1"
+            app:showSeekBarValue="true" />
+        <SeekBarPreference
+            android:defaultValue="10"
+            android:key="scroll_speed"
+            android:max="30"
+            android:summary="10 = обычная скорость"
+            android:title="Скорость прокрутки"
+            app:min="2"
+            app:showSeekBarValue="true" />
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="haptics"
+            android:summary="Лёгкая вибрация при правом клике, перетаскивании, свайпе"
+            android:title="Вибро-отклик" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Интерфейс">
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="show_quick_bar"
+            android:summary="Esc, Tab, копировать/вставить, громкость, медиа и т.д."
+            android:title="Панель быстрых клавиш" />
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="show_click_buttons"
+            android:title="Кнопки левый / средний / правый" />
+        <SwitchPreferenceCompat
+            android:defaultValue="true"
+            android:key="keep_screen_on"
+            android:title="Не гасить экран" />
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="volume_keys"
+            android:summary="Кнопки громкости телефона меняют громкость на ПК"
+            android:title="Кнопки громкости управляют ПК" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Соединение">
+        <SwitchPreferenceCompat
+            android:defaultValue="false"
+            android:key="auto_connect"
+            android:summary="Подключаться к последнему ПК при запуске и после обрыва"
+            android:title="Автоподключение" />
+        <EditTextPreference
+            android:key="password"
+            android:summary="Должен совпадать с --password на сервере. Пусто = без пароля"
+            android:title="Пароль сервера" />
+    </PreferenceCategory>
+</PreferenceScreen>

@@ -6,4 +6,13 @@
         <item name="android:navigationBarColor">#111111</item>
         <item name="android:statusBarColor">#111111</item>
     </style>
+
+    <style name="Theme.TouchpadMVP.Settings" parent="Theme.AppCompat">
+        <item name="colorPrimary">#202124</item>
+        <item name="colorPrimaryDark">#111111</item>
+        <item name="colorAccent">#8AB4F8</item>
+        <item name="android:windowBackground">@color/black</item>
+        <item name="android:navigationBarColor">#111111</item>
+        <item name="android:statusBarColor">#111111</item>
+    </style>
 </resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="swipe_entries">
+        <item>Ничего</item>
+        <item>Обзор окон (Win+Tab)</item>
+        <item>Показать рабочий стол (Win+D)</item>
+        <item>Следующее окно (Alt+Tab)</item>
+        <item>Предыдущее окно (Alt+Shift+Tab)</item>
+        <item>Следующий рабочий стол</item>
+        <item>Предыдущий рабочий стол</item>
+        <item>Назад (Alt+←)</item>
+        <item>Вперёд (Alt+→)</item>
+        <item>Следующая вкладка</item>
+        <item>Предыдущая вкладка</item>
+        <item>Развернуть окно</item>
+        <item>Свернуть окно</item>
+        <item>Закрыть окно (Alt+F4)</item>
+        <item>Скриншот области</item>
+        <item>Заблокировать ПК</item>
+        <item>Пауза / воспроизведение</item>
+    </string-array>
+    <string-array name="swipe_values">
+        <item>none</item>
+        <item>task_view</item>
+        <item>desktop</item>
+        <item>alt_tab</item>
+        <item>alt_shift_tab</item>
+        <item>desk_next</item>
+        <item>desk_prev</item>
+        <item>back</item>
+        <item>forward</item>
+        <item>next_tab</item>
+        <item>prev_tab</item>
+        <item>maximize</item>
+        <item>minimize</item>
+        <item>close_window</item>
+        <item>screenshot</item>
+        <item>lock</item>
+        <item>play_pause</item>
+    </string-array>
+</resources>
