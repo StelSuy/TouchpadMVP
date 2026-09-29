@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="14dp" android:background="#111111">
+    <TextView android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="Touchpad MVP" android:textColor="#FFFFFF" android:textSize="24sp" android:textStyle="bold" />
+    <TextView android:id="@+id/status" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="4dp" android:text="● Не подключено" android:textColor="#FFB4AB" android:textSize="14sp" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="10dp" android:orientation="horizontal">
+        <EditText android:id="@+id/ipInput" android:layout_width="0dp" android:layout_height="52dp" android:layout_weight="1" android:hint="IP ПК, например 192.168.1.10" android:inputType="text" android:singleLine="true" android:text="192.168.1.100" android:textColor="#FFFFFF" android:textColorHint="#9AA0A6" android:backgroundTint="#8AB4F8" />
+        <EditText android:id="@+id/portInput" android:layout_width="80dp" android:layout_height="52dp" android:layout_marginStart="8dp" android:hint="5000" android:inputType="number" android:singleLine="true" android:text="5000" android:textColor="#FFFFFF" android:textColorHint="#9AA0A6" android:backgroundTint="#8AB4F8" />
+    </LinearLayout>
+    <Button android:id="@+id/connectButton" android:layout_width="match_parent" android:layout_height="50dp" android:layout_marginTop="8dp" android:text="ПОДКЛЮЧИТЬ" android:textColor="#FFFFFF" android:background="@drawable/button_bg" />
+    <com.stelsuy.touchpad.TouchpadView android:id="@+id/touchpad" android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1" android:layout_marginTop="12dp" android:background="@drawable/touchpad_bg" />
+    <LinearLayout android:layout_width="match_parent" android:layout_height="64dp" android:layout_marginTop="10dp" android:orientation="horizontal">
+        <Button android:id="@+id/leftButton" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="ЛЕВЫЙ КЛИК" android:textColor="#FFFFFF" android:background="@drawable/button_bg" />
+        <Space android:layout_width="8dp" android:layout_height="1dp" />
+        <Button android:id="@+id/rightButton" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:text="ПРАВЫЙ КЛИК" android:textColor="#FFFFFF" android:background="@drawable/button_bg" />
+    </LinearLayout>
+    <TextView android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp" android:text="Двигай пальцем по полю. Короткий тап = левый клик." android:textColor="#9AA0A6" android:textSize="12sp" />
+</LinearLayout>
